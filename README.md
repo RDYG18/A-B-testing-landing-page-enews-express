@@ -146,3 +146,26 @@ We can see the comparison of the time users spent on the original landing page v
 The new landing page appears to be more effective at retaining user attention. The increase in median time spent, along with more concentrated and elevated engagement levels, suggests improvements in content layout or user experience. This supports the hypothesis that the redesign positively impacted how users interact with the page and provides preliminary evidence in favor of adopting the new version.
 
 </div>
+
+**Language Preference vs Time Spent**
+
+This boxplot compares the time spent on the landing page across the three language groups: Spanish, English, and French.
+
+- Users who selected Spanish as their preferred language show a slightly higher median (5.7 minutes) with a relatively compact interquartile range, indicating consistent engagement.
+
+- English speaking users display the widest IQR, ranging from under 3 minutes to over 7, and also include both very short and very long session outliers, reflecting more diverse usage patterns.
+
+- French speaking users show a median around 5.2 minutes, with a slightly right skewed distribution, including some high-value outliers above 10 minutes.
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/9c8cce71-f38b-413f-b2e3-b596aae005c7" width="500"/>
+</div> 
+
+Interpretation:
+
+<div align="justify">
+  
+Although all three groups show comparable medians (between 5.2 and 5.7 minutes), the variance in engagement differs notably by language. Spanish-speaking users tend to have more uniform time on page, while English and French users exhibit a broader range of interaction. This variation may indicate that the landing page content is better tailored or more intuitive for Spanish-speaking users, whereas users in the other language groups may encounter sections that are less engaging, harder to navigate, or not fully localized.
+
+</div>
+
