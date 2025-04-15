@@ -26,15 +26,15 @@ The objective of this project was to evaluate whether a newly designed landing p
 
 As part of the Data Science team, I analyzed interaction data from a randomized A/B test involving 100 participants, split evenly across control and treatment groups. The analysis was conducted at a 5% significance level to ensure statistical validity.
 
-**Business Questions Addressed for the Design Team:**  
+- **Business Questions Addressed for the Design Team:**  
 
-**Engagement Time Comparison:** Do users spend more time on the new landing page compared to the old one?
+- **Engagement Time Comparison:** Do users spend more time on the new landing page compared to the old one?
 
-**Conversion Rate Effectiveness:** Is the conversion rate significantly higher on the redesigned page?
+- **Conversion Rate Effectiveness:** Is the conversion rate significantly higher on the redesigned page?
 
-**Language-Based Conversion Differences:** Does language preference affect conversion rates?
+- **Language-Based Conversion Differences:** Does language preference affect conversion rates?
 
-**Consistency of Engagement Across Languages:** Is time-on-page consistent across different language groups?
+- **Consistency of Engagement Across Languages:** Is time-on-page consistent across different language groups?
 
 
 </div>
@@ -90,10 +90,37 @@ Among the 100 participants in the A/B test, 54% converted, while 46% did not. Th
   <img src="https://github.com/user-attachments/assets/e5de0a52-8e2b-4e96-8b5f-a3d873397c77" width="500"/>
 </div>
 
+**Language Preference**
+
+The distribution of users by their preferred language when viewing the landing page. Among the 100 participants, Spanish and French were each selected by 34 users, while English was chosen by 32 users. The nearly even distribution across all three languages suggests a well-balanced audience.
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/6d8d24cf-1451-4c92-95da-99f0cc4a8f88" width="500"/>
+</div>
+
+
 
 ### Bivariate Analysis
 
+**Conversion Status vs Time Spent on the Page**
 
+This shows the distribution of time spent on the landing page between users who converted (yes) and those who did not (no).
+
+- Users who converted spent more time on average, with a median of approximately 6.6 minutes, compared to 4.0 minutes for those who did not convert.
+
+- The interquartile range for converted users (5.4 to 7.7 minutes) is both higher and narrower than that of non-converted users (2.3 to 5.2 minutes), indicating more consistent and sustained engagement among those who subscribed.
+
+- There are more high value outliers in the converted group, suggesting that longer visits were not uncommon among those who eventually subscribed.
+
+- The presence of low time outliers in the non-converted group also points to users who bounced quickly.
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/87d5daf4-4f5a-497e-9eab-d53ff53462d6" width="500"/>
+</div> 
+
+**Interpretation:**
+
+There is a clear difference in engagement behavior between converters and non-converters. The findings suggest that spending more time on the landing page is associated with a higher likelihood of subscription, reinforcing the idea that content depth, layout clarity, or overall page experience could be influencing conversion decisions. This supports the need to optimize for elements that retain user attention longer.
 
 
 
