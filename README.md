@@ -80,7 +80,18 @@ The distribution of time spent on the page shows that the median duration is app
   <img src="https://github.com/user-attachments/assets/f9c91f72-c8a8-496d-b563-8b043fbbc2b4" width="500"/>
 </div>
 
+
+
 **Conversion Status**
+
+Among the 100 participants in the A/B test, 54% converted, while 46% did not. This near-even split indicates a relatively well-balanced outcome, making it a suitable dependent variable for statistical comparison between groups.
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/e5de0a52-8e2b-4e96-8b5f-a3d873397c77" width="500"/>
+</div>
+
+
+### Bivariate Analysis
 
 
 
