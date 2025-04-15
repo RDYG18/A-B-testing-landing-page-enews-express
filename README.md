@@ -24,11 +24,11 @@ To evaluate the impact of these changes, we launched an A/B testing initiative. 
   
 The objective of this project was to evaluate whether a newly designed landing page led to higher user engagement and conversion rates compared to the existing version. The desing team at E-news Express requested this analysis to inform future decisions around content layout and user experience optimization.
 
-As part of the Data Science team, I analyzed interaction data from a randomized A/B test involving 100 participants, split evenly across control and treatment groups. The analysis was conducted at a 5% significance level to ensure statistical validity.
+As part of the Data Science team, I analyzed interaction data from a randomized A/B test involving 100 participants, split evenly across control and treatment groups. The analysis was conducted at a 5% significance level to ensure statistical validity and to address the key questions posed by the design team.
 
 - **Business Questions Addressed for the Design Team:**  
 
-- **Engagement Time Comparison:** Do users spend more time on the new landing page compared to the old one?
+- **Engagement Time Comparison:** ¿Has the new landing page design resulted in higher user engagement based on session duration?
 
 - **Conversion Rate Effectiveness:** Is the conversion rate significantly higher on the redesigned page?
 
@@ -168,4 +168,27 @@ Interpretation:
 Although all three groups show comparable medians (between 5.2 and 5.7 minutes), the variance in engagement differs notably by language. Spanish-speaking users tend to have more uniform time on page, while English and French users exhibit a broader range of interaction. This variation may indicate that the landing page content is better tailored or more intuitive for Spanish-speaking users, whereas users in the other language groups may encounter sections that are less engaging, harder to navigate, or not fully localized.
 
 </div>
+
+---
+## A/B Test Design and Analysis
+
+#### Engagement Time Comparison 
+
+**¿Has the new landing page design resulted in higher user engagement based on session duration?**
+
+Define the null and alternate hypotheses:
+
+$H_0$:There is no significant difference in the average session duration between the new and old landing pages.
+
+$H_a$:The average session duration on the new landing page is significantly higher than on the old page.
+
+Based on this setup, we will perform a one-tailed independent samples t-test to compare the means of two independent populations (new vs. old landing page).
+Since the population standard deviations are unknown, and the samples are assumed to be randomly assigned and independent, this test is appropriate for our analysis. 
+
+As given in the problem statement, we select $\alpha = 0.05$.
+
+Collect and prepare data 
+
+To prepare for the A/B analysis, the dataset was first split into two independent groups based on the landing page variant: users who interacted with the **new** landing page and those who interacted with the **old** one. From each group, the variable time_spent_on_the_page was isolated to form two separate samples for comparison. The sample standard deviation was then calculated for both groups to assess the variability in user engagement within each version of the page. This step is crucial to validate the assumptions of the t-test and understand the spread of session durations before conducting hypothesis testing.
+
 
