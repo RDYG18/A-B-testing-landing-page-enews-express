@@ -122,5 +122,27 @@ This shows the distribution of time spent on the landing page between users who 
 
 There is a clear difference in engagement behavior between converters and non-converters. The findings suggest that spending more time on the landing page is associated with a higher likelihood of subscription, reinforcing the idea that content depth, layout clarity, or overall page experience could be influencing conversion decisions. This supports the need to optimize for elements that retain user attention longer.
 
+**Landing Page Version vs Time Spent**
 
+We can see the comparison of the time users spent on the original landing page versus the redesigned version.
 
+- Users who visited the new landing page spent more time on average, with a median of approximately 6.2 minutes, compared to 4.4 minutes for those who saw the old version.
+
+- The interquartile range (IQR) for the new page is also narrower and shifted upwards, suggesting more consistent engagement at a higher level.
+
+- Both versions show some outliers. The new page has higher-value outliers, indicating that some users may have liked the page and stayed longer in order to explore all its aspects. Conversely, lower-value outliers suggest that some users left quickly, possibly due to a lack of interest or poor initial impression.
+
+- The lower whisker of the old page dips below 1 minute, while the new page maintains a higher minimum engagement time. This suggests that users may have found the new landing page more engaging or enjoyable to interact with..
+
+  
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/f6ff20bf-7a43-4dfe-95de-3491559320f8" width="500"/>
+</div> 
+
+**Interpretation:**
+
+<div align="justify">
+  
+The new landing page appears to be more effective at retaining user attention. The increase in median time spent, along with more concentrated and elevated engagement levels, suggests improvements in content layout or user experience. This supports the hypothesis that the redesign positively impacted how users interact with the page and provides preliminary evidence in favor of adopting the new version.
+
+</div>
