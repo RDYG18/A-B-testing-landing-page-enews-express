@@ -191,4 +191,7 @@ Collect and prepare data
 
 To prepare for the A/B analysis, the dataset was first split into two independent groups based on the landing page variant: users who interacted with the **new** landing page and those who interacted with the **old** one. From each group, the variable time_spent_on_the_page was isolated to form two separate samples for comparison. The sample standard deviation was then calculated for both groups to assess the variability in user engagement within each version of the page. This step is crucial to validate the assumptions of the t-test and understand the spread of session durations before conducting hypothesis testing.
 
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/c758e969-dc24-4378-8d7c-03636f7709d8" width="600"/>
+</div> 
 
