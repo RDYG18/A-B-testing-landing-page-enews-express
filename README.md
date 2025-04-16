@@ -272,3 +272,46 @@ The analysis was conducted using a **significance level of α = 0.05**. The test
 The test does **not provide statistical evidence** of a meaningful difference in session duration across language groups on the new landing page. This finding is visually supported by the boxplot, where the medians and distributions of session times for English, French, and Spanish users appear relatively similar, with no group showing a distinctly higher or lower pattern. While minor fluctuations exist, the overall variance is not statistically significant, suggesting that **user engagement with the new design is consistent across languages**.
 
 </div>
+
+##  Insights from A/B Testing
+
+Based on the statistical tests conducted and supported by the visual analysis, we provide the following insights to guide the decision-making process around the landing page redesign for the desing team:
+
+### Did the new landing page lead to higher user engagement based on session duration?
+
+Yes. Users spent significantly more time on the new landing page compared to the old version.  
+This finding is supported by both the statistical evidence (**p-value = 0.0048**) and the distribution observed in the **boxplot**, where the median and interquartile range were notably higher for the new design. This suggests that the outline and content of the new page are more effective at capturing user attention, providing a better opportunity to drive conversions.
+
+---
+
+### Did the new landing page result in a higher conversion rate?
+
+Yes. The conversion rate for the new page was significantly higher than for the original page (**p-value = 0.0080**).  
+This result was visually confirmed by the **stacked bar chart**, where the new page shows a clear increase in the proportion of users who subscribed. The redesign not only retained users longer but also converted a higher percentage of them, validating its effectiveness in achieving core business goals.
+
+---
+
+### Is conversion rate influenced by the user's preferred language?
+
+No. The Chi-square test did not find a statistically significant relationship between preferred language and conversion status (**p-value = 0.2130**).  
+The **stacked proportion bar chart** shows relatively balanced conversion outcomes across English, French, and Spanish users, suggesting that language preference did not play a major role in conversion outcomes.
+
+---
+
+### Do users from different language groups spend different amounts of time on the new page?
+
+No. The ANOVA test returned a non-significant result (**p-value = 0.4320**), indicating that session duration on the new page does not significantly differ by language.  
+The **boxplot** supports this finding, with similar medians and overlapping distributions across all three language groups. This implies that the new design is **consistently engaging across languages**, without requiring language-specific optimization.
+
+## Recommendations
+
+- **Adopt the new landing page** as the default version. It significantly improves both engagement and conversion rates.
+
+- **Keep the same design across all languages.** No language group showed different behavior, so localization is not necessary at this stage.
+
+- **Prioritize improvements to the new page**, such as content personalization or CTA placement, rather than further redesigns.
+
+- **Track key metrics over time** (session duration and conversions) to ensure performance stays consistent post-implementation.
+
+- **Avoid language-specific changes.** The data shows no evidence that language preference affects engagement or conversion.
+
