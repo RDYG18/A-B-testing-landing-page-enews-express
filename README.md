@@ -26,11 +26,11 @@ The objective of this project was to evaluate whether a newly designed landing p
 
 As part of the Data Science team, I analyzed interaction data from a randomized A/B test involving 100 participants, split evenly across control and treatment groups. The analysis was conducted at a 5% significance level to ensure statistical validity and to address the key questions posed by the design team.
 
-- **Business Questions Addressed for the Design Team:**  
+- **Business Questions Addressed for the Design Team:** ¿Did the new landing page lead to a statistically significant increase in user engagement, as measured by session duration?
 
-- **Engagement Time Comparison:** ¿Has the new landing page design resulted in higher user engagement based on session duration?
+- **Engagement Time Comparison:** ¿The new landing page lead to a statistically significant increase in user engagement, as measured by session duration?
 
-- **Conversion Rate Effectiveness:** Is the conversion rate significantly higher on the redesigned page?
+- **Conversion Rate Effectiveness:** ¿Did the new landing page lead to a statistically significant increase in conversion rate compared to the original version, as measured by the proportion of users who subscribed after visiting each page?
 
 - **Language-Based Conversion Differences:** Does language preference affect conversion rates?
 
@@ -97,7 +97,6 @@ The distribution of users by their preferred language when viewing the landing p
 <div align="center">
   <img src="https://github.com/user-attachments/assets/6d8d24cf-1451-4c92-95da-99f0cc4a8f88" width="500"/>
 </div>
-
 
 
 ### Bivariate Analysis
@@ -170,28 +169,85 @@ Although all three groups show comparable medians (between 5.2 and 5.7 minutes),
 </div>
 
 ---
-## A/B Test Design and Analysis
-
-#### Engagement Time Comparison 
-
-**¿Has the new landing page design resulted in higher user engagement based on session duration?**
-
-Define the null and alternate hypotheses:
-
-$H_0$:There is no significant difference in the average session duration between the new and old landing pages.
-
-$H_a$:The average session duration on the new landing page is significantly higher than on the old page.
-
-Based on this setup, we will perform a one-tailed independent samples t-test to compare the means of two independent populations (new vs. old landing page).
-Since the population standard deviations are unknown, and the samples are assumed to be randomly assigned and independent, this test is appropriate for our analysis. 
-
-As given in the problem statement, we select $\alpha = 0.05$.
-
-Collect and prepare data 
-
-To prepare for the A/B analysis, the dataset was first split into two independent groups based on the landing page variant: users who interacted with the **new** landing page and those who interacted with the **old** one. From each group, the variable time_spent_on_the_page was isolated to form two separate samples for comparison. The sample standard deviation was then calculated for both groups to assess the variability in user engagement within each version of the page. This step is crucial to validate the assumptions of the t-test and understand the spread of session durations before conducting hypothesis testing.
+##  A/B Testing – Time Spent on Page
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/c758e969-dc24-4378-8d7c-03636f7709d8" width="600"/>
+  <img src="https://github.com/user-attachments/assets/3db06f5b-d137-459e-ae3e-3b9f263baf0b" width="600"/>
 </div> 
 
+####  ¿Did the new landing page lead to a statistically significant increase in user engagement, as measured by session duration?
+
+To assess whether the **redesigned landing page increased user engagement**, we performed an independent samples t-test using the `ttest_ind` function from the `scipy.stats` library. The analysis compared the **mean time spent on the page** between users exposed to the **new version** and those shown the **original version**.
+
+The test was conducted under the assumption of **equal variances** between groups. A **one-tailed hypothesis** was defined with the following setup:
+
+- **Null Hypothesis (H₀):** The mean time spent on the new page is less than or equal to that on the old page.  
+- **Alternative Hypothesis (H₁):** The mean time spent on the new page is greater than that on the old page.
+
+A significance level of **α = 0.05** was used to evaluate the result. The t-test returned a **p-value of 0.0048**, which is below the defined threshold.
+
+**Interpretation:**  
+There is sufficient statistical evidence to reject the null hypothesis and accept the alternative. This suggests that users spend significantly more time on the new landing page compared to the existing version. The result aligns with and reinforces the pattern observed in the exploratory boxplot analysis, where higher session durations were visually concentrated among users exposed to the new design. Together, the statistical outcome and visual evidence support the conclusion that the redesign had a positive impact on user engagement, providing a strong basis for the design team to proceed with a full rollout.
+
+
+## A/B Testing – Conversion Rate 
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/3047cb56-79f7-4032-aad8-12c3b8b60f94" width="500"/>
+</div> 
+
+#### ¿Did the new landing page lead to a statistically significant increase in conversion rate compared to the original version, as measured by the proportion of users who subscribed after visiting each page?
+
+To evaluate whether the **redesigned landing page led to a higher conversion rate**, we performed a **two-sample z-test for proportions** using the `proportions_ztest` function from the `statsmodels.stats.proportion` module. The test compared the **conversion rate** between users exposed to the **new landing page** (treatment group) and those shown the **original version** (control group).
+
+The groups were independent, and each user's conversion outcome was binary (`yes` or `no`). A **one-tailed test** was performed under the following hypotheses:
+
+- **Null Hypothesis (H₀):** The conversion rate for the new page is less than or equal to the conversion rate for the old page.  
+- **Alternative Hypothesis (H₁):** The conversion rate for the new page is greater than the conversion rate for the old page.
+
+The test was conducted at a **significance level of α = 0.05**. The z-test returned a **p-value of 0.0080**, which is below the defined threshold.
+
+**Interpretation:**  
+There is sufficient statistical evidence to reject the null hypothesis and conclude that the conversion rate on the new landing page is significantly higher than that of the old version. This suggests that the design changes not only improved engagement, but also led to a measurable increase in the proportion of users subscribing. These findings support the business decision to move forward with the new landing page.Is also visually supported by the stacked proportion bar chart, where a noticeably larger share of users converted on the new landing page compared to the old one. The clear difference in the visual distribution of conversion outcomes reinforces the statistical result and strengthens the case for adopting the new design.
+
+## A/B Testing – Conversion vs Language Preference
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/5c513e33-fc4e-4061-9c20-6dfe76afe6d7"width="500"/>
+</div> 
+
+### Is there a statistically significant relationship between a user’s preferred language and their likelihood of conversion on the landing page?
+
+To evaluate whether a user’s **preferred language is associated with conversion behavior**, we conducted a **Chi-square test of independence** using the `chi2_contingency` function from the `scipy.stats` module. The test examines the relationship between two categorical variables: **`converted` status** (`yes` or `no`) and **`language_preferred`** (`English`, `French`, `Spanish`).
+
+A contingency table was created based on the observed frequencies of conversions across the three language groups.
+
+The test was performed using the following hypotheses:
+
+- **Null Hypothesis (H₀):** Conversion status and preferred language are independent.  
+- **Alternative Hypothesis (H₁):** Conversion status and preferred language are dependent.
+
+A significance level of **α = 0.05** was used to assess statistical evidence. The resulting **p-value was 0.2130**, which is above the significance threshold.
+
+**Interpretation:**
+The test did not return statistical evidence of a significant relationship between conversion status and preferred language. This result aligns with what was observed during the exploratory data analysis, where the **stacked proportion bar chart** of conversions by language showed relatively balanced distributions across the three language groups. While minor differences exist—such as a slightly higher conversion proportion among English speakers—the visual patterns do not suggest meaningful disparities. The **Chi-square** result supports the idea that these variations are likely due to chance rather than a true association between language preference and conversion behavior.
+
+## A/B Testing – Session Duration on New Page by Language
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/8305f209-e033-4539-818a-9855678a510b" width="500"/>
+</div> 
+
+### ¿Is there a statistically significant difference in session duration on the new landing page across users with different language preferences?
+
+To determine whether **session duration on the new landing page varies depending on the user's preferred language**, we conducted a **one-way ANOVA test** using the `f_oneway` function from the `scipy.stats` module. This test compares the **mean time spent on the page** across three independent groups: **English**, **French**, and **Spanish** speakers.
+
+The test was structured under the following hypotheses:
+
+- **Null Hypothesis (H₀):** The mean time spent on the new page is the same for all language groups.  
+- **Alternative Hypothesis (H₁):** The mean time spent on the new page differs for at least one language group.
+
+The analysis was conducted using a **significance level of α = 0.05**. The test returned a **p-value of 0.432**, which is well above the threshold.
+
+**Interpretation:**  
+The test does **not provide statistical evidence** of a meaningful difference in session duration across language groups on the new landing page. This finding is visually supported by the boxplot, where the medians and distributions of session times for English, French, and Spanish users appear relatively similar, with no group showing a distinctly higher or lower pattern. While minor fluctuations exist, the overall variance is not statistically significant, suggesting that **user engagement with the new design is consistent across languages**.
