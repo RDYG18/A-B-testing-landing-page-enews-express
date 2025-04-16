@@ -90,6 +90,7 @@ Among the 100 participants in the A/B test, 54% converted, while 46% did not. Th
   <img src="https://github.com/user-attachments/assets/e5de0a52-8e2b-4e96-8b5f-a3d873397c77" width="500"/>
 </div>
 
+
 **Language Preference**
 
 The distribution of users by their preferred language when viewing the landing page. Among the 100 participants, Spanish and French were each selected by 34 users, while English was chosen by 32 users. The nearly even distribution across all three languages suggests a well-balanced audience.
@@ -121,6 +122,8 @@ This shows the distribution of time spent on the landing page between users who 
 
 There is a clear difference in engagement behavior between converters and non-converters. The findings suggest that spending more time on the landing page is associated with a higher likelihood of subscription, reinforcing the idea that content depth, layout clarity, or overall page experience could be influencing conversion decisions. This supports the need to optimize for elements that retain user attention longer.
 
+---
+
 **Landing Page Version vs Time Spent**
 
 We can see the comparison of the time users spent on the original landing page versus the redesigned version.
@@ -146,6 +149,8 @@ The new landing page appears to be more effective at retaining user attention. T
 
 </div>
 
+---
+
 **Language Preference vs Time Spent**
 
 This boxplot compares the time spent on the landing page across the three language groups: Spanish, English, and French.
@@ -160,7 +165,7 @@ This boxplot compares the time spent on the landing page across the three langua
   <img src="https://github.com/user-attachments/assets/9c8cce71-f38b-413f-b2e3-b596aae005c7" width="500"/>
 </div> 
 
-Interpretation:
+**Interpretation:**
 
 <div align="justify">
   
@@ -169,11 +174,14 @@ Although all three groups show comparable medians (between 5.2 and 5.7 minutes),
 </div>
 
 ---
+
 ##  A/B Testing – Time Spent on Page
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/3db06f5b-d137-459e-ae3e-3b9f263baf0b" width="600"/>
 </div> 
+
+<div align="justify">
 
 ####  ¿Did the new landing page lead to a statistically significant increase in user engagement, as measured by session duration?
 
@@ -189,12 +197,15 @@ A significance level of **α = 0.05** was used to evaluate the result. The t-tes
 **Interpretation:**  
 There is sufficient statistical evidence to reject the null hypothesis and accept the alternative. This suggests that users spend significantly more time on the new landing page compared to the existing version. The result aligns with and reinforces the pattern observed in the exploratory boxplot analysis, where higher session durations were visually concentrated among users exposed to the new design. Together, the statistical outcome and visual evidence support the conclusion that the redesign had a positive impact on user engagement, providing a strong basis for the design team to proceed with a full rollout.
 
+</div>
 
 ## A/B Testing – Conversion Rate 
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/3047cb56-79f7-4032-aad8-12c3b8b60f94" width="500"/>
 </div> 
+
+<div align="justify">
 
 #### ¿Did the new landing page lead to a statistically significant increase in conversion rate compared to the original version, as measured by the proportion of users who subscribed after visiting each page?
 
@@ -210,11 +221,15 @@ The test was conducted at a **significance level of α = 0.05**. The z-test retu
 **Interpretation:**  
 There is sufficient statistical evidence to reject the null hypothesis and conclude that the conversion rate on the new landing page is significantly higher than that of the old version. This suggests that the design changes not only improved engagement, but also led to a measurable increase in the proportion of users subscribing. These findings support the business decision to move forward with the new landing page.Is also visually supported by the stacked proportion bar chart, where a noticeably larger share of users converted on the new landing page compared to the old one. The clear difference in the visual distribution of conversion outcomes reinforces the statistical result and strengthens the case for adopting the new design.
 
+</div>
+
 ## A/B Testing – Conversion vs Language Preference
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/5c513e33-fc4e-4061-9c20-6dfe76afe6d7"width="500"/>
 </div> 
+
+<div align="justify">
 
 ### Is there a statistically significant relationship between a user’s preferred language and their likelihood of conversion on the landing page?
 
@@ -232,11 +247,15 @@ A significance level of **α = 0.05** was used to assess statistical evidence. T
 **Interpretation:**
 The test did not return statistical evidence of a significant relationship between conversion status and preferred language. This result aligns with what was observed during the exploratory data analysis, where the **stacked proportion bar chart** of conversions by language showed relatively balanced distributions across the three language groups. While minor differences exist—such as a slightly higher conversion proportion among English speakers—the visual patterns do not suggest meaningful disparities. The **Chi-square** result supports the idea that these variations are likely due to chance rather than a true association between language preference and conversion behavior.
 
+</div>
+
 ## A/B Testing – Session Duration on New Page by Language
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/8305f209-e033-4539-818a-9855678a510b" width="500"/>
 </div> 
+
+<div align="justify">
 
 ### ¿Is there a statistically significant difference in session duration on the new landing page across users with different language preferences?
 
@@ -251,3 +270,5 @@ The analysis was conducted using a **significance level of α = 0.05**. The test
 
 **Interpretation:**  
 The test does **not provide statistical evidence** of a meaningful difference in session duration across language groups on the new landing page. This finding is visually supported by the boxplot, where the medians and distributions of session times for English, French, and Spanish users appear relatively similar, with no group showing a distinctly higher or lower pattern. While minor fluctuations exist, the overall variance is not statistically significant, suggesting that **user engagement with the new design is consistent across languages**.
+
+</div>
